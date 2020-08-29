@@ -124,7 +124,7 @@ const config = {
     url: document.location.href,
     logo: document.location.protocol + '//' + document.location.host + '/logo.jpeg'
 };
-
+seropp.init(config)
 let levels = [0, 1, 2, 3, 4, 5];
 
 class App extends Component {
@@ -175,10 +175,12 @@ class App extends Component {
         if (this.state.account) {
             this.fetchInfo(this.state.account.mainPKr);
         } else {
-            that.getCurrentAccount(function (account) {
-                that.setState({account: account});
-                that.fetchInfo(account.mainPKr);
-            });
+            seropp.init(config, function () {
+                that.getCurrentAccount(function (account) {
+                    that.setState({account: account});
+                    that.fetchInfo(account.mainPKr);
+                });
+            })
         }
 
         this.timer = setInterval(function () {
@@ -1096,9 +1098,12 @@ class App extends Component {
     }
 
     getCurrentAccount(callback) {
+        console.log("getCurrentAccount");
         seropp.getAccountList(function (datas) {
             let account;
+            console.log("account", datas);
             for (var i = 0; i < datas.length; i++) {
+                console.log("account", datas[i].IsCurrent);
                 if (datas[i].IsCurrent == undefined || datas[i].IsCurrent) {
                     callback({
                         pk: datas[i].PK,
