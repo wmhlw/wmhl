@@ -125,7 +125,8 @@ const config = {
     logo: document.location.protocol + '//' + document.location.host + '/logo.jpeg'
 };
 
-let levels = [0,1,2,3,4,5];
+let levels = [0, 1, 2, 3, 4, 5];
+
 class App extends Component {
 
     constructor(props) {
@@ -407,22 +408,48 @@ class App extends Component {
                 <div>
                     <div className="modal fade" id="rule" data-backdrop="static" data-keyboard="false"
                          tabIndex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true"
-                         >
+                    >
                         <div className="modal-dialog">
-                            <div className="modal-content" style={{background: '#8c1b13',color:'#da9728'}}>
+                            <div className="modal-content" style={{background: '#8c1b13', color: '#da9728'}}>
                                 <div className="modal-header">
                                     <h5 className="modal-title" id="staticBackdropLabel">{language.get("rule")}</h5>
 
                                 </div>
                                 <div className="modal-body">
                                     <div>
-                                        全球共享矩阵SERO营销计划。<br/> wmhl寄生在SERO匿名公链上永续存在！
+                                        全球共享矩阵SERO营销计划。<br/> wmhl寄生在SERO匿名公链上永续存在！
                                     </div>
                                     <br/>
                                     <div>玩家参与条件与级别:</div>
-                                    <div>矩阵分为S3矩阵和S6矩阵，总共12个级别。</div>
+                                    <div>营销矩阵分为S3矩阵和S6矩阵，分别为12个级别。</div>
                                     <div>
-                                        <table border="1" style={{borderColor: 'white',textAlign:'center', width:'100%'}}>
+                                        <div>S3矩阵</div>
+                                        <table border="1"
+                                               style={{borderColor: 'white', textAlign: 'center', width: '100%'}}>
+                                            <tr>
+                                                {
+                                                    levels.map(function (val, index) {
+                                                            return (
+                                                                <td>{30 * Math.pow(2, index)}</td>
+                                                            )
+                                                        }
+                                                    )
+                                                }
+                                            </tr>
+                                            <tr>
+                                                {
+                                                    levels.map(function (val, index) {
+                                                            return (
+                                                                <td>{1920 * Math.pow(2, index)}</td>
+                                                            )
+                                                        }
+                                                    )
+                                                }
+                                            </tr>
+                                        </table>
+                                        <div>S6矩阵</div>
+                                        <table border="1"
+                                               style={{borderColor: 'white', textAlign: 'center', width: '100%'}}>
                                             <tr>
                                                 {
                                                     levels.map(function (val, index) {
@@ -445,31 +472,41 @@ class App extends Component {
                                             </tr>
                                         </table>
                                     </div>
-                                    <div>首次入金系统默认同时把S3矩阵和S6矩阵的第一个级别激活。升级第二个级别S3和S6矩阵可以单独升级。每一次升级的成本都是前一个级别的两倍，每升级激活一个级别，前面所有激活的级别都可以享受永续循环收益。首次入金系统默认同时把S3矩阵和S6矩阵的第一个级别激活。升级第二个级别S3和S6矩阵可以单独升级。每一次升级的成本都是前一个级别的两倍，每升级激活一个级别，前面所有激活的级别都可以享受永续循环收益。首次入金系统默认同时把S3矩阵和S6矩阵的第一个级别激活。升级第二个级别S3和S6矩阵可以单独升级。每一次升级的成本都是前一个级别的两倍，每升级激活一个级别，前面所有激活的级别都可以享受永续循环收益。</div>
                                     <br/>
-                                    <div>玩法及收益: </div>
                                     <div>
-                                        S3矩阵的合约规则:共有3个空位，前面2个空位推荐奖金100%到您钱包，第3个空位奖金滑给到上级6代平均分发到个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。
+                                        首次入金系统默认同时把S3矩阵和S6矩阵的第一个级别激活。升级第二个级别S3和S6矩阵可以单独升级。每一次升级的成本是前一个级别的两倍，但推荐收益也同步提高。每升级激活一个级别，前面所有激活的级别都可以享受永续循环收益。
                                     </div>
-                                    <div>S6矩阵的合约规则:共有6个空位，第一层2个空位推荐奖金100%滑到给上级，第二层4个空位，前面3个空位的奖金100%给到您钱包，最后一个空位奖金滑给到上级6代平均分发个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。 S6矩阵的合约规则:共有6个空位，第一层2个空位推荐奖金100%滑到给上级，第二层4个空位，前面3个空位的奖金100%给到您钱包，最后一个空位奖金滑给到上级6代平均分发个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。 </div>
                                     <br/>
-                                    <div>烧伤机制: </div>
-                                    <div>直推会员在S3矩阵，S6矩阵升级激活的级别如果大于自己的级别则会有烧伤，烧伤奖金100%收益系统会自动滑至上级同级别。 </div>
-                                    <div>系统代码100%开源，奖金收益100%拔比，无资金沉淀，链上秒结算，收益自动到账您个人钱包，0泡沫，永不崩盘，永不关网，永不跑路，无人为操控，一次性投资，终身收益。 </div>
-                                    <div>技术占股6%</div>
-                                    <div>系统默认邀请码: <a onClick={()=>{
+                                    <div>玩法及收益:</div>
+                                    <div>
+                                        S3矩阵的合约规则:共有3个空位，前面2个空位投资额100%到您个人钱包，第3个空位投资额滑至上级6代，平均分发到个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。
+                                    </div>
+                                    <div>
+                                        S6矩阵的合约规则:共有6个空位，第一层2个空位投资额100%滑至上级，第二层4个空位，前面3个空位投资额100%给到您个人钱包，最后一个空位投资额滑至上级6代，平均分发到个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。
+                                    </div>
+                                    <br/>
+                                    <div>烧伤机制:</div>
+                                    <div>
+                                        直推会员在S3矩阵，S6矩阵升级激活的级别如果大于自己的级别则会有烧伤，烧伤奖金100%收益系统会自动滑至上级同级别。
+                                    </div>
+                                    <div>
+                                        系统代码100%开源，奖金收益100%拔比，无资金沉淀，链上秒结算，收益自动到账您个人钱包，0泡沫，永不崩盘，永不关网，永不跑路，无人为操控，一次性投资，终身收益。
+                                    </div>
+                                    <div>技术占股6%。</div>
+                                    <div>系统默认邀请码: <a onClick={() => {
                                         if (copy("rja6x7")) {
                                             this.selfAlert(language.get("success"));
                                         }
-                                    }}>rja6x7</a> </div>
+                                    }}>rja6x7</a></div>
                                     <div>
-                                        开源代码查询地址1: <br/>https://github.com/wmhlw/wmhl
+                                        开源代码查询地址1: <br/>https://github.com/wmhlw/wmhl
                                     </div>
                                     <div>开源代码查询地址2: <br/>https://gitee.com/wmhl/wmhl</div>
 
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">{language.get("close")}
+                                    <button type="button" className="btn btn-secondary"
+                                            data-dismiss="modal">{language.get("close")}
                                     </button>
                                 </div>
                             </div>
@@ -521,7 +558,8 @@ class App extends Component {
 
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">{language.get("close")}</button>
+                                    <button type="button" className="btn btn-secondary"
+                                            data-dismiss="modal">{language.get("close")}</button>
                                     <button type="button" className="btn btn-primary" onClick={() => {
                                         this.register();
                                     }}>{language.get("ok")}
@@ -534,7 +572,7 @@ class App extends Component {
 
                 <div className="row logotype-wrapper">
                     <div style={{width: '100%', textAlign: 'right', paddingTop: '20px', paddingRight: '20px'}}>
-                        <a onClick={()=>{
+                        <a onClick={() => {
                             $("#rule").modal('show');
                         }}>{language.get("rule")}</a></div>
 

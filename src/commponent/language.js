@@ -20,8 +20,10 @@ class Language {
         let that = this;
 
         seropp.getInfo(function (info) {
-            console.log("lang", info.language, typeof info.language, info.language == "zh_CN");
             let locale = info.language;
+            if (locale != "zh_CN") {
+                locale = "en_US";
+            }
             intl.init({
                 currentLocale: info.language,
                 locales,
