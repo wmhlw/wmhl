@@ -1,0 +1,16 @@
+{
+  "register": "注册",
+  "ok": "确定",
+  "code": "邀请码",
+  "wallet": "钱包地址",
+  "contract": "智能合约地址",
+  "partners": "平台上的合作伙伴",
+  "reopens": "重开次数",
+  "partner1": "您邀请的伙伴",
+  "partner2": "溢出",
+  "partner3": "从下面溢出",
+  "partner4": "超过上级的伙伴",
+  "success": "复制成功",
+  "rule": "规则",
+  "close": "关闭"
+}

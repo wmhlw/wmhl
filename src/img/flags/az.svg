@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="Roundel_of_the_Italian_Air_Force" inkscape:version="0.44+devel" sodipodi:docbase="C:\Documents and Settings\Flanker\Desktop" sodipodi:docname="Azerbaijan Air Force roundel.svg" sodipodi:version="0.32" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600"
+	 style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#008CCC;}
+	.st1{fill:#D12421;}
+	.st2{fill:#009645;}
+	.st3{fill:#FFFFFF;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1.0" gridtolerance="10.0" guidetolerance="10.0" id="base" inkscape:current-layer="g5459" inkscape:cx="300" inkscape:cy="349.3878" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="736" inkscape:window-width="967" inkscape:window-x="238" inkscape:window-y="67" inkscape:zoom="0.62833333" objecttolerance="10.0" pagecolor="#ffffff">
+	</sodipodi:namedview>
+<g id="g5459" transform="matrix(2,0,0,2,-300,0)">
+	<path id="blue_stripe" class="st0" d="M300,0c-65.27,0-120.83,41.76-141.438,100h282.875C420.83,41.76,365.27,0,300,0z"/>
+	<path id="red_stripe" class="st1" d="M158.562,100c-5.535,15.642-8.562,32.47-8.562,50s3.028,34.358,8.562,50h282.875
+		c5.535-15.642,8.562-32.47,8.562-50s-3.028-34.358-8.562-50H158.562z"/>
+	<path id="green_stripe" class="st2" d="M158.562,200C179.17,258.24,234.73,300,300,300s120.83-41.76,141.438-100H158.562z"/>
+	<g id="white_crescent" transform="translate(10,0)">
+		
+			<circle id="white_circle" sodipodi:cx="280" sodipodi:cy="150" sodipodi:rx="42" sodipodi:ry="42" class="st3" cx="280" cy="150" r="42">
+		</circle>
+		
+			<circle id="red_circle" sodipodi:cx="291" sodipodi:cy="150" sodipodi:rx="35" sodipodi:ry="35" class="st1" cx="291" cy="150" r="35">
+		</circle>
+	</g>
+	<polygon id="white_star" class="st3" points="327.859,138.795 332.5,127.5 337.142,138.795 348.41,134.09 343.705,145.358 355,150 
+		343.705,154.642 348.41,165.911 337.142,161.206 332.5,172.501 327.859,161.206 316.591,165.911 321.296,154.642 310,150 
+		321.296,145.358 316.591,134.09 	"/>
+</g>
+</svg>

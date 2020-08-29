@@ -1,0 +1,16 @@
+{
+  "register": "register",
+  "ok": "OK",
+  "code": "Invitation code",
+  "wallet": "Your SERO wallet Address",
+  "contract": "Smart Contract Adresse",
+  "partners": "PARTNERS ON THE PLATFORM",
+  "reopens": "NUMBER OF REOPENS",
+  "partner1": "PARTNER INVITED BY YOU",
+  "partner2": "OVERFLOW FROM UP",
+  "partner3": "BOTTOM OVERFLOW",
+  "partner4": "PARTNER WHO IS AHEAD OF HIS INVITER",
+  "success": "success",
+  "rule": "rule",
+  "close": "Close"
+}

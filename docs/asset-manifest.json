@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "./static/css/main.029705e4.chunk.css",
+    "main.js": "./static/js/main.e6001f24.chunk.js",
+    "main.js.map": "./static/js/main.e6001f24.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.4123e105.js",
+    "runtime-main.js.map": "./static/js/runtime-main.4123e105.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "./static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.8da372eb.chunk.js": "./static/js/2.8da372eb.chunk.js",
+    "static/js/2.8da372eb.chunk.js.map": "./static/js/2.8da372eb.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.4b08c86348a37d4b658d2722bff1d31b.js": "./precache-manifest.4b08c86348a37d4b658d2722bff1d31b.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "./static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.029705e4.chunk.css.map": "./static/css/main.029705e4.chunk.css.map",
+    "static/js/2.8da372eb.chunk.js.LICENSE.txt": "./static/js/2.8da372eb.chunk.js.LICENSE.txt",
+    "static/media/common.css": "./static/media/NeogreyMedium.081d231d.otf",
+    "static/media/alert.svg": "./static/media/alert.3d68f91f.svg",
+    "static/media/main.css": "./static/media/reinvest.35458d1a.svg",
+    "static/media/all.min.css": "./static/media/fa-solid-900.c2801fb4.svg",
+    "static/media/partners_light.svg": "./static/media/partners_light.9a1ae033.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4123e105.js",
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.8da372eb.chunk.js",
+    "static/css/main.029705e4.chunk.css",
+    "static/js/main.e6001f24.chunk.js"
+  ]
+}
