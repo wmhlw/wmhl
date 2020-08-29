@@ -204,6 +204,7 @@ class App extends Component {
     }
 
     register() {
+        let that = this;
         let referrerId;
         try {
             referrerId = decode($("#referrerCode").val());
@@ -217,7 +218,7 @@ class App extends Component {
         } else {
             this.registration(this.state.account, referrerId, function (hash, err) {
                 if (err) {
-                    this.selfAlert(err);
+                    that.selfAlert(err);
                 }
                 $("#register").modal('hide');
             });
@@ -462,9 +463,9 @@ class App extends Component {
                                         }
                                     }}>rja6x7</a> </div>
                                     <div>
-                                        开源代码查询地址1: 
+                                        开源代码查询地址1: <br/>https://github.com/wmhlw/wmhl
                                     </div>
-                                    <div>开源代码查询地址2:https://gitee.com/wmhl/wmhl</div>
+                                    <div>开源代码查询地址2: <br/>https://gitee.com/wmhl/wmhl</div>
 
                                 </div>
                                 <div className="modal-footer">
