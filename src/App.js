@@ -192,14 +192,21 @@ class App extends Component {
         }
     }
 
-    showAccount(account, len) {
+    showAccount(account) {
+        if (!account) {
+            return "选择账户"
+        }
+        return account.name + " " + account.mainPKr.slice(0, 5) + "..." + account.mainPKr.slice(-5)
+    }
+
+    showName(account) {
         if (!account) {
             return "选择账户"
         }
         if (account.name) {
-            return  account.name + " " + account.mainPKr.slice(0, len) + "..." + account.mainPKr.slice(-len)
+            return account.name
         } else {
-            return account.mainPKr.slice(0, len) + "..." + account.mainPKr.slice(-len)
+            return account.mainPKr.slice(0, 3) + "..." + account.mainPKr.slice(-3)
         }
     }
 
@@ -598,14 +605,14 @@ class App extends Component {
                                                                                  $('#accounts').modal('hide')
                                                                                  that.fetchInfo(item.mainPKr);
                                                                              }}>
-                                                            {that.showAccount(item, 5)}
+                                                            {that.showAccount(item)}
                                                         </button>)
                                                     });
 
                                                     that.setState({accountOptions: options})
                                                     $('#accounts').modal('show')
                                                 });
-                                            }}>{this.showAccount(this.state.account,3)}</a>
+                                            }}>{this.showName(this.state.account)}</a>
                                         </div>
                                         <div className="col-4" style={{textAlign: 'right'}}>
                                             {
@@ -1092,7 +1099,7 @@ class App extends Component {
         seropp.getAccountList(function (datas) {
             let account;
             for (var i = 0; i < datas.length; i++) {
-                if(datas[i].IsCurrent == undefined || datas[i].IsCurrent) {
+                if (datas[i].IsCurrent == undefined || datas[i].IsCurrent) {
                     callback({
                         pk: datas[i].PK,
                         mainPKr: datas[i].MainPKr,
