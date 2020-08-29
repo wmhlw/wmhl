@@ -119,7 +119,7 @@ const contract = serojs.callContract(abiJson, "hrdm67bnWENArcBkUnwtHj3RffmgtnHPd
 const config = {
     name: "wmhl",
     contractAddress: contract.address,
-    github: "https://gitee.com/wmhl/wmhl",
+    github: "https://github.com/wmhlw/wmhl",
     author: "wmhl",
     url: document.location.href,
     logo: document.location.protocol + '//' + document.location.host + '/logo.jpeg'
@@ -192,12 +192,15 @@ class App extends Component {
         }
     }
 
-    showAccount(account) {
+    showAccount(account, len) {
         if (!account) {
             return "选择账户"
         }
-        let balance = new BN(account.balance).div(new BN(10).pow(new BN(18))).toString(10);
-        return account.name + " " + account.mainPKr.slice(0, 5) + "..." + account.mainPKr.slice(-5) + " " + balance + "SERO"
+        if (account.name) {
+            return  account.name + " " + account.mainPKr.slice(0, len) + "..." + account.mainPKr.slice(-len)
+        } else {
+            return account.mainPKr.slice(0, len) + "..." + account.mainPKr.slice(-len)
+        }
     }
 
     showAddress(addr) {
@@ -595,14 +598,14 @@ class App extends Component {
                                                                                  $('#accounts').modal('hide')
                                                                                  that.fetchInfo(item.mainPKr);
                                                                              }}>
-                                                            {that.showAccount(item)}
+                                                            {that.showAccount(item, 5)}
                                                         </button>)
                                                     });
 
                                                     that.setState({accountOptions: options})
                                                     $('#accounts').modal('show')
                                                 });
-                                            }}>{this.state.account && this.state.account.name}</a>
+                                            }}>{this.showAccount(this.state.account,3)}</a>
                                         </div>
                                         <div className="col-4" style={{textAlign: 'right'}}>
                                             {
@@ -1089,16 +1092,11 @@ class App extends Component {
         seropp.getAccountList(function (datas) {
             let account;
             for (var i = 0; i < datas.length; i++) {
-                if (datas[i].IsCurrent) {
-                    let balance = datas[i].Balance.get("SERO");
-                    if (!balance) {
-                        balance = 0;
-                    }
+                if(datas[i].IsCurrent == undefined || datas[i].IsCurrent) {
                     callback({
                         pk: datas[i].PK,
                         mainPKr: datas[i].MainPKr,
                         name: datas[i].Name,
-                        balance: balance,
                     });
                     break;
                 }
@@ -1110,15 +1108,10 @@ class App extends Component {
         seropp.getAccountList(function (datas) {
             let accounts = [];
             datas.forEach(function (item, index) {
-                let balance = item.Balance.get("SERO");
-                if (!balance) {
-                    balance = 0;
-                }
                 accounts.push({
                     pk: item.PK,
                     mainPKr: item.MainPKr,
                     name: item.Name,
-                    balance: balance,
                 })
             });
             callback(accounts)
