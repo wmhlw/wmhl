@@ -122,7 +122,7 @@ const config = {
     github: "https://github.com/wmhlw/wmhl",
     author: "wmhl",
     url: document.location.href,
-    logo: document.location.protocol + '//' + document.location.host + '/logo.jpeg'
+    logo: document.location.protocol + '//' + document.location.host + '/wmhl/logo.jpeg'
 };
 seropp.init(config)
 let levels = [0, 1, 2, 3, 4, 5];
@@ -429,13 +429,13 @@ class App extends Component {
                                 </div>
                                 <div className="modal-body">
                                     <div>
-                                        全球共享矩阵SERO营销计划。<br/> wmhl寄生在SERO匿名公链上永续存在！
+                                        {language.get("rule11")}<br/> {language.get("rule12")}
                                     </div>
                                     <br/>
-                                    <div>玩家参与条件与级别:</div>
-                                    <div>营销矩阵分为S3矩阵和S6矩阵，分别为12个级别。</div>
+                                    <div>{language.get("rule13")}</div>
+                                    <div>{language.get("rule14")}</div>
                                     <div>
-                                        <div>S3矩阵</div>
+                                        <div>{language.get("rule15")}</div>
                                         <table border="1"
                                                style={{borderColor: 'white', textAlign: 'center', width: '100%'}}>
                                             <tr>
@@ -459,7 +459,7 @@ class App extends Component {
                                                 }
                                             </tr>
                                         </table>
-                                        <div>S6矩阵</div>
+                                        <div>{language.get("rule16")}</div>
                                         <table border="1"
                                                style={{borderColor: 'white', textAlign: 'center', width: '100%'}}>
                                             <tr>
@@ -486,34 +486,34 @@ class App extends Component {
                                     </div>
                                     <br/>
                                     <div>
-                                        首次入金系统默认同时把S3矩阵和S6矩阵的第一个级别激活。升级第二个级别S3和S6矩阵可以单独升级。每一次升级的成本是前一个级别的两倍，但推荐收益也同步提高。每升级激活一个级别，前面所有激活的级别都可以享受永续循环收益。
+                                        {language.get("rule0")}
                                     </div>
                                     <br/>
-                                    <div>玩法及收益:</div>
+                                    <div>{language.get("rule1")}</div>
                                     <div>
-                                        S3矩阵的合约规则:共有3个空位，前面2个空位投资额100%到您个人钱包，第3个空位投资额滑至上级6代，平均分发到个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。
+                                        {language.get("rule2")}
                                     </div>
                                     <div>
-                                        S6矩阵的合约规则:共有6个空位，第一层2个空位投资额100%滑至上级，第二层4个空位，前面3个空位投资额100%给到您个人钱包，最后一个空位投资额滑至上级6代，平均分发到个人钱包。一轮后系统默认提示升级下一个级别，升级好下个级别，前面已激活的级别均可循环重置永续收益。
+                                        {language.get("rule3")}
                                     </div>
                                     <br/>
-                                    <div>烧伤机制:</div>
+                                    <div>{language.get("rule4")}</div>
                                     <div>
-                                        直推会员在S3矩阵，S6矩阵升级激活的级别如果大于自己的级别则会有烧伤，烧伤奖金100%收益系统会自动滑至上级同级别。
+                                        {language.get("rule5")}
                                     </div>
                                     <div>
-                                        系统代码100%开源，奖金收益100%拔比，无资金沉淀，链上秒结算，收益自动到账您个人钱包，0泡沫，永不崩盘，永不关网，永不跑路，无人为操控，一次性投资，终身收益。
+                                        {language.get("rule6")}
                                     </div>
-                                    <div>技术占股6%。</div>
-                                    <div>系统默认邀请码: <a onClick={() => {
+                                    <div>{language.get("rule7")}</div>
+                                    <div>{language.get("rule8")} <a onClick={() => {
                                         if (copy("rja6x7")) {
                                             this.selfAlert(language.get("success"));
                                         }
                                     }}>rja6x7</a></div>
                                     <div>
-                                        开源代码查询地址1: <br/>https://github.com/wmhlw/wmhl
+                                        {language.get("rule9")} <br/>https://github.com/wmhlw/wmhl
                                     </div>
-                                    <div>开源代码查询地址2: <br/>https://gitee.com/wmhl/wmhl</div>
+                                    <div>{language.get("rule10")} <br/>https://gitee.com/wmhl/wmhl</div>
 
                                 </div>
                                 <div className="modal-footer">
@@ -596,35 +596,44 @@ class App extends Component {
                                 <div className="status-panel_id">
                                     <div className="row">
                                         <div className="col-8" style={{textAlign: 'left'}}>
-                                            <a onClick={() => {
-                                                this.getAccountList(function (accounts) {
-                                                    let options = [];
-                                                    accounts.forEach((item, index) => {
-                                                        options.push(<button type="button"
-                                                                             className="list-group-item list-group-item-action"
-                                                                             onClick={() => {
-                                                                                 that.setState({account: item});
-                                                                                 $('#accounts').modal('hide')
-                                                                                 that.fetchInfo(item.mainPKr);
-                                                                             }}>
-                                                            {that.showAccount(item)}
-                                                        </button>)
-                                                    });
+                                            <div style={{
+                                                borderStyle: 'dashed',
+                                                borderWidth: '2px', borderColor: '#dac18e'
+                                            }}>
+                                                <a style={{}} onClick={() => {
+                                                    this.getAccountList(function (accounts) {
+                                                        let options = [];
+                                                        accounts.forEach((item, index) => {
+                                                            options.push(<button type="button"
+                                                                                 className="list-group-item list-group-item-action"
+                                                                                 onClick={() => {
+                                                                                     that.setState({account: item});
+                                                                                     $('#accounts').modal('hide')
+                                                                                     that.fetchInfo(item.mainPKr);
+                                                                                 }}>
+                                                                {that.showAccount(item)}
+                                                            </button>)
+                                                        });
 
-                                                    that.setState({accountOptions: options})
-                                                    $('#accounts').modal('show')
-                                                });
-                                            }}>{this.showName(this.state.account)}</a>
+                                                        that.setState({accountOptions: options})
+                                                        $('#accounts').modal('show')
+                                                    });
+                                                }}>{this.showName(this.state.account)}</a>
+                                            </div>
+
                                         </div>
                                         <div className="col-4" style={{textAlign: 'right'}}>
                                             {
-                                                this.state.user.id == 0 && <a onClick={() => {
+                                                this.state.user.id == 0 && <div style={{
+                                                    borderStyle: 'dashed',
+                                                    borderWidth: '2px', borderColor: '#dac18e'
+                                                }}><a onClick={() => {
                                                     $(".registerForm").attr("class", "was-validated");
                                                     $(".feedback").attr("class", "");
                                                     $("#referrerCode").attr("class", "form-control");
                                                     $('#register').modal('show')
                                                 }
-                                                }>{language.get("register")}</a>
+                                                }>{language.get("register")}</a></div>
                                                 // <a style={{color: '#EEE'}} className="status-panel__user-id"
                                                 //    data-trigger_value_siblings=".trigger_value__user-id"
                                                 //    data-trigger_value="***|878430"><font

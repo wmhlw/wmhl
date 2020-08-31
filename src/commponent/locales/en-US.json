@@ -12,5 +12,22 @@
   "partner4": "PARTNER WHO IS AHEAD OF HIS INVITER",
   "success": "success",
   "rule": "rule",
-  "close": "Close"
+  "close": "Close",
+  "rule0": "By default, the first level of S3 matrix and S6 matrix is activated at the same time. Upgrade the second level, S3 and S6 matrices can be upgraded separately. The cost of each upgrade is twice that of the previous level, but the recommendation benefits also increase. Each upgrade activates one level, and all the previous activated levels can enjoy the benefits of the perpetual cycle.",
+  "rule1": "How to play and benefits:",
+  "rule2": "The contract rules of S3 matrix: there are three vacancies, 100% of the investment amount of the first two vacancies will be allocated to your personal wallet, and the investment amount of the third vacancy will be distributed to your personal wallet on average. After one round, the system will prompt to upgrade the next level by default. If the next level is upgraded, the previous activated level can reset the sustainable benefits in a cycle.",
+  "rule3": "The contract rule of S6 matrix: there are 6 vacancies in total, 2 vacancies in the first floor slide 100% to the superior, and 4 vacancies in the second floor. 100% of the investment amount of the first three vacancies will be given to your personal wallet, and the investment amount of the last vacant space will be allocated to your personal wallet on average. After one round, the system will prompt to upgrade the next level by default. If the next level is upgraded, the previous activated level can reset the sustainable benefits in a cycle.",
+  "rule4": "Burn mechanism:",
+  "rule5": "Direct push members in S3 matrix, S6 matrix upgrade activation level if greater than their own level, there will be burns, burn bonus 100% revenue system will automatically slide to the same level of the superior.",
+  "rule6": "System code 100% open source, bonus income 100% pull ratio, no money precipitation, chain seconds settlement, income automatically arrives at your personal wallet, 0 bubble, never collapse, never shut the net, never run away, no one is manipulated, one-time investment, lifelong income.",
+  "rule7": "Technology accounts for 6%",
+  "rule8": "system default invitation code:",
+  "rule9": "Open source code query address1:",
+  "rule10": "Open source code query address2:",
+  "rule11": "Global shared matrix sero marketing plan.",
+  "rule12": "Wmhl parasitized on the anonymous public chain of sero forever!",
+  "rule13": "player participation conditions and levels:",
+  "rule14": "Marketing matrix is divided into S3 matrix and S6 matrix, which are 12 levels respectively.",
+  "rule15": "S3 matrix",
+  "rule16": "S6 matrix"
 }
